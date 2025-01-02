@@ -1,6 +1,9 @@
-const fs = require('fs')
+const validator = require('validator')
+const getNotes = require('./notes')
 
-fs.writeFileSync('notes.txt',' 1st write')
-fs.writeFileSync('notes.txt',' 2nd write')
-fs.appendFileSync('notes.txt',' 3rd appendage ')
+const msg = getNotes()
 
+console.log(msg)
+
+console.log(validator.isEmail('bobby@exmaple.com'))
+console.log(validator.isURL('http://tester.com'))
